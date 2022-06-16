@@ -15,8 +15,6 @@ public class ControllHome {
     @FXML private Button hoEstudiantes;
     @FXML private Button cursos;
 
-
-
     @FXML void homeInstructores(ActionEvent event) throws SQLException{
         try {
             ///////////////////////////////////////////////////

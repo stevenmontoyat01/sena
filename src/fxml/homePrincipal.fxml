@@ -9,13 +9,21 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.99" prefHeight="601.0" prefWidth="999.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControlAll.ControlH">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.99" prefHeight="601.0" prefWidth="999.0" style="-fx-background-color: #000;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControlAll.ControlH">
    <children>
       <Accordion layoutX="148.0" layoutY="72.0" />
       <Accordion layoutX="148.0" layoutY="143.0" />
       <Pane prefHeight="54.0" prefWidth="999.0" style="-fx-background-color: #232323;">
          <children>
-            <Button fx:id="loginHo" layoutX="831.0" layoutY="9.0" mnemonicParsing="false" onAction="#openLoginHo" prefHeight="36.0" prefWidth="141.0" style="-fx-background-color: transparent; -fx-border-color: #fff;" text="INICIAR SESION" textFill="WHITE">
+            <Button fx:id="loginHo" layoutX="826.0" layoutY="9.0" mnemonicParsing="false" onAction="#openLoginHo" prefHeight="36.0" prefWidth="141.0" style="-fx-background-color: transparent; -fx-border-color: #fff;" text="INICIAR SESION" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="registerStudent" layoutX="664.0" layoutY="9.0" mnemonicParsing="false" onAction="#clikStudent" prefHeight="36.0" prefWidth="141.0" style="-fx-background-color: transparent; -fx-border-color: #fff;" text="registro estudiante" textFill="WHITE">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
