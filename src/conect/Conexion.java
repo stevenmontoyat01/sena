@@ -6,8 +6,8 @@ import java.sql.SQLException;
 
 public class Conexion { 
     private Connection con;
-    private String login="sena";
-    private String clave="12345";
+    private String login="root";
+    private String clave="";
     private boolean conectado;
 
     public Connection getCon() {
@@ -28,7 +28,7 @@ public class Conexion {
         try {
             //obtener el driver
             Class.forName("com.mysql.cj.jdbc.Driver");
-            this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sena",login,clave);
+            this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cursosIntensivos",login,clave);
             this.conectado=true;
             System.out.println("conectado");
         } catch (ClassNotFoundException e) {

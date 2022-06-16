@@ -1,4 +1,5 @@
-package ControllerFX;
+package ControllerAdmin;
+
 import java.sql.SQLException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,10 +10,12 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class ControlInstru{
+public class ControlEstudiantes {
 
 
     // C O D E
+
+
 
 
 
@@ -34,7 +37,7 @@ public class ControlInstru{
         try {
             Stage stage = (Stage) home.getScene().getWindow(); 
             stage.close();
-            Parent root = (new FXMLLoader(getClass().getResource("fxml/home.fxml"))).load();
+            Parent root = (new FXMLLoader(getClass().getResource("../fxml/admin/home.fxml"))).load();
             Scene scene =  new Scene(root);
             Stage teatro = new Stage();
             teatro.setScene(scene);
@@ -48,7 +51,7 @@ public class ControlInstru{
         try {
             Stage stage = (Stage) cursos.getScene().getWindow(); 
             stage.close();
-            Parent root = (new FXMLLoader(getClass().getResource("fxml/cursos.fxml"))).load();
+            Parent root = (new FXMLLoader(getClass().getResource("../fxml/admin/cursos.fxml"))).load();
             Scene scene =  new Scene(root);
             Stage teatro = new Stage();
             teatro.setScene(scene);
@@ -57,12 +60,12 @@ public class ControlInstru{
             e.printStackTrace();
         }
     }
-
+    
     @FXML void openEstudiantes(ActionEvent event) throws SQLException{
         try {
             Stage stage = (Stage) estudiantes.getScene().getWindow(); 
             stage.close();
-            Parent root = (new FXMLLoader(getClass().getResource("fxml/estudiantes.fxml"))).load();
+            Parent root = (new FXMLLoader(getClass().getResource("../fxml/admin/estudiantes.fxml"))).load();
             Scene scene =  new Scene(root);
             Stage teatro = new Stage();
             teatro.setScene(scene);
@@ -77,13 +80,13 @@ public class ControlInstru{
         try {
             Stage stage = (Stage) instructores.getScene().getWindow(); 
             stage.close();
-            Parent root = (new FXMLLoader(getClass().getResource("fxml/instructores.fxml"))).load();
+            Parent root = (new FXMLLoader(getClass().getResource("../fxml/admin/instructores.fxml"))).load();
             Scene scene =  new Scene(root);
             Stage teatro = new Stage();
             teatro.setScene(scene);
             teatro.show();
         } catch (Exception e) {
-
+            e.printStackTrace();
         }
     }
 

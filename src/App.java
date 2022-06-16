@@ -5,20 +5,22 @@ import javafx.stage.Stage;
 import javafx.application.Application;
 
 
-public class App extends Application {
-    @Override
-    public void start(Stage PrimaryStage) throws Exception {
-    FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/home.fxml"));
-    Parent root = loader.load();
-    Scene scene = new Scene(root);
-    PrimaryStage.setScene(scene);
-    PrimaryStage.setTitle("home");
-    PrimaryStage.show();
-    }
 
+public class App extends Application {
     public static void main(String[] args) throws Exception {
         launch(args);
     }
+
+    @Override public void start(Stage PrimaryStage) throws Exception {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("fxml/admin/home.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        PrimaryStage.setScene(scene);
+        PrimaryStage.show();
+    
+    }
+
+
 }
 
 

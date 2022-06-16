@@ -1,4 +1,4 @@
-package ControllerFX;
+package ControllerAdmin;
 import java.sql.SQLException;
 
 import javafx.event.ActionEvent;
@@ -14,8 +14,8 @@ import java.sql.Statement;
 import conect.Conexion;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-// import javafx.scene.control.Alert.AlertType;
-// import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button; 
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
@@ -90,7 +90,7 @@ public class ControlCursos{
     try {
         Stage stage = (Stage) home.getScene().getWindow(); 
         stage.close();
-        Parent root = (new FXMLLoader(getClass().getResource("fxml/home.fxml"))).load();
+        Parent root = (new FXMLLoader(getClass().getResource("../fxml/admin/home.fxml"))).load();
         Scene scene =  new Scene(root);
         Stage teatro = new Stage();
         teatro.setScene(scene);
@@ -104,7 +104,7 @@ public class ControlCursos{
     try {
         Stage stage = (Stage) cursos.getScene().getWindow(); 
         stage.close();
-        Parent root = (new FXMLLoader(getClass().getResource("fxml/cursos.fxml"))).load();
+        Parent root = (new FXMLLoader(getClass().getResource("../fxml/admin/cursos.fxml"))).load();
         Scene scene =  new Scene(root);
         Stage teatro = new Stage();
         teatro.setScene(scene);
@@ -118,7 +118,7 @@ public class ControlCursos{
     try {
         Stage stage = (Stage) estudiantes.getScene().getWindow(); 
         stage.close();
-        Parent root = (new FXMLLoader(getClass().getResource("fxml/estudiantes.fxml"))).load();
+        Parent root = (new FXMLLoader(getClass().getResource("../fxml/admin/estudiantes.fxml"))).load();
         Scene scene =  new Scene(root);
         Stage teatro = new Stage();
         teatro.setScene(scene);
@@ -133,7 +133,7 @@ public class ControlCursos{
     try {
         Stage stage = (Stage) instructores.getScene().getWindow(); 
         stage.close();
-        Parent root = (new FXMLLoader(getClass().getResource("fxml/instructores.fxml"))).load();
+        Parent root = (new FXMLLoader(getClass().getResource("../fxml/admin/instructores.fxml"))).load();
         Scene scene =  new Scene(root);
         Stage teatro = new Stage();
         teatro.setScene(scene);
