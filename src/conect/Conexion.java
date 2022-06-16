@@ -28,7 +28,7 @@ public class Conexion {
         try {
             //obtener el driver
             Class.forName("com.mysql.cj.jdbc.Driver");
-            this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cursosIntensivos",login,clave);
+            this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sena",login,clave);
             this.conectado=true;
             System.out.println("conectado");
         } catch (ClassNotFoundException e) {

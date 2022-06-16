@@ -36,7 +36,7 @@ public class LoginFX{
         // ACA SIRVE LA VALIDACION PARA EL ADMIN 
         if(conect.isConectado()){
             System.out.println("Prueba conectado-------------");
-            String query = "SELECT ideAprendi from usuario where nombre = '"+nombreUsuario+"' AND identificacion = '"+contraseña+"' AND tipo = '"+3+"' ";
+            String query = "SELECT id from personas where nombre = '"+nombreUsuario+"' AND identificacion = '"+contraseña+"' AND tipo = '"+3+"' ";
             try (Statement stm = conect.getCon().createStatement()){
                 ResultSet rst = stm.executeQuery(query);
                 if(rst.next()){;
@@ -53,7 +53,7 @@ public class LoginFX{
             // ACA SIRVE LA VALIDACION PARA EL INSTRUCTOR 
                 }else if (conect.isConectado()){
                     System.out.println("Prueba conectado-------------");
-                    String queryEstudiantes = "SELECT ideAprendi from usuario where email = '"+nombreUsuario+"' AND identificacion = '"+contraseña+"' AND tipo = '"+1+"' ";
+                    String queryEstudiantes = "SELECT id from personas where email = '"+nombreUsuario+"' AND identificacion = '"+contraseña+"' AND tipo = '"+1+"' ";
                     try (Statement stmE = conect.getCon().createStatement()){
                         ResultSet rste = stm.executeQuery(queryEstudiantes);
                         if(rste.next()){;
@@ -69,7 +69,7 @@ public class LoginFX{
                             conect.desconectar();
                         }
                     }
-                    
+                    // =======    S E G U I R      M A Ñ A N A  ============
                 }else if(conect.isConectado()){
 
                 }

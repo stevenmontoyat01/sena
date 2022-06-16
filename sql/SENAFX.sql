@@ -17,7 +17,7 @@ CREATE TABLE tipo (
   Descripcion char(20) NULL
 );
 
-ALTER TABLE tipo ADD FOREIGN KEY (idtipo) REFERENCES personas(id);
+ALTER TABLE personas ADD FOREIGN KEY (tipo) REFERENCES tipo(idtipo);
 
 CREATE TABLE cursos (
   codigo int not null PRIMARY KEY AUTO_INCREMENT,
@@ -45,8 +45,30 @@ CREATE TABLE registro_cursos (
 ALTER TABLE registro_cursos ADD FOREIGN KEY (alumno) REFERENCES personas(id);
 ALTER TABLE registro_cursos ADD FOREIGN KEY (curso) REFERENCES cursos(codigo);
 
+INSERT INTO tipo (Descripcion) VALUES ('Instructor');
+INSERT INTO tipo (Descripcion) VALUES ('Estudiante');
+INSERT INTO tipo (Descripcion) VALUES ('Admin');
+
+
+/*==  H O R A R I I OS  ==*/
+INSERT INTO horarios (día, hora) VALUES ('Lunes', '10:00');
+INSERT INTO horarios (día, hora) VALUES ('Martes', '14:00');
+INSERT INTO horarios (día, hora) VALUES ('Miercoles', '16:00');
+INSERT INTO horarios (día, hora) VALUES ('Jueves', '18:00');
+/* INSERT INTO horarios (día, hora) VALUES ('viernes', '20:00');*/
+
+/*==  T I P O S  ==*/
+INSERT INTO tipo (Descripcion) VALUES ('Instructor');
+INSERT INTO tipo (Descripcion) VALUES ('Estudiante');
+
+INSERT INTO personas (identificacion, nombre, apellido, tipo, email) VALUES ('1985865', 'Henrry', 'Falla Ortiz', '1', 'hfallao@sena.edu.co');
+INSERT INTO personas (identificacion, nombre, apellido, tipo, email) VALUES ('1089452', 'Ediwn', 'Gustavo', '1', 'edwin@misena.edu.co');
+INSERT INTO personas (identificacion, nombre, apellido, tipo, email) VALUES ('1789623', 'Alvaro', 'Rodriguez', '1', 'arodrigue@misena.edu.co');
+INSERT INTO personas (identificacion, nombre, apellido, edad, tipo, email) VALUES ('123456', 'AdminD', 'Dairon', '18', '3', 'DaironAdmin@gmail.com');
+INSERT INTO personas (identificacion, nombre, apellido, edad, tipo, email) VALUES ('123456', 'AdminS', 'Steven', '18', '3', 'StevenAdmin@gmail.com');
+
 
 /*------------------------------------------------------------------------------------------*/
-CREATE USER 'sena'@'localhost' IDENTIFIED BY '12345';
-GRANT ALL PRIVILEGES ON sena.* TO 'sena'@'localhost';
+CREATE USER 'root'@'localhost' IDENTIFIED BY '';
+GRANT ALL PRIVILEGES ON sena.* TO 'root'@'localhost';
 FLUSH PRIVILEGES;
