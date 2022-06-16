@@ -55,7 +55,7 @@ public class ControlEstudiantes {
         try {
             Stage stage = (Stage) home.getScene().getWindow();
             stage.close();
-            Parent root = (new FXMLLoader(getClass().getResource("../fxml/admin/home.fxml"))).load();
+            Parent root = (new FXMLLoader(getClass().getResource("../fxml/homePrincipal.fxml"))).load();
             Scene scene = new Scene(root);
             Stage teatro = new Stage();
             teatro.setScene(scene);
